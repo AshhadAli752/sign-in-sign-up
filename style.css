@@ -1,0 +1,134 @@
+body {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  background: rgb(72, 172, 122);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  color: rgb(0, 58, 31);
+  text-align: center;
+  padding-top: 40px;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 1.1rem;
+  margin-bottom: 25px;
+  color: #023f23;
+}
+
+
+input[type="radio"] {
+  display: none;
+}
+
+label {
+  color: #2d6a53;
+  font-weight: 600;
+  background: #d8f3dc;
+  padding: 10px 25px;
+  border-radius: 25px;
+  transition: all 0.3s ease;
+   
+}
+
+label:hover {
+  background: #95d5b2;
+  color: #1b4332;
+  
+}
+
+/* Active tab */
+#tab1:checked + label,
+#tab2:checked + label {
+  background: #2d6a4f;
+  color: white;
+}
+
+
+/* Form container */
+.form-container {
+  position: relative;
+  width: 320px;
+  height: 370px;
+}
+
+.form {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 6px 15px rgba(0, 128, 0, 0.2);
+  padding: 25px;
+  transition: all 0.5s ease;
+}
+
+.form h2 {
+  margin-bottom: 15px;
+  color: #1a6845;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  border: 1px solid #b7e4c7;
+  border-radius: 6px;
+  font-size: 14px;
+  transition: 0.3s;
+}
+input:hover {
+  outline: none;
+  border-color: #2d6a4f;
+  box-shadow: 0 0 5px #74c69d;
+}
+
+
+button {
+  width: 100%;
+  padding: 10px;
+  background: #2d6a4f;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition:  0.3s ease;
+  margin-top: 10px;
+  
+}
+
+button:hover {
+  background: #1b4332;
+}
+
+/* Hide/show forms based on selected tab using CSS */
+#tab2:checked ~ .form-container .sign-up {
+  
+  display: block;
+  
+}
+
+#tab2:checked ~ .form-container .sign-in {
+  
+  display: none;
+  
+}
+
+#tab1:checked ~ .form-container .sign-in {
+ 
+  display: block;
+  
+}
+
+#tab1:checked ~ .form-container .sign-up {
+ 
+  display: none;
+  
+} 
